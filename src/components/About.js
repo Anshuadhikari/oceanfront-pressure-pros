@@ -35,9 +35,7 @@ const About = () => {
               a professional image, Oceanfront Pressure Pros is here to serve you.
             </p>
             
-            <div className="about-cta">
-              <p className="about-phone">📞 Call or text <a href="tel:586-612-7380">586-612-7380</a> today for your free estimate!</p>
-            </div>
+            
             
 
           </div>

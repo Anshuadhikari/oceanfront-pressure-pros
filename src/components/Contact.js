@@ -51,14 +51,7 @@ const Contact = () => {
         
         <div className="contact-content">
           <div className="contact-info">
-            <div className="contact-card">
-              <div className="contact-icon">📞</div>
-              <h3>Call or Text</h3>
-              <p>Speak directly with our team</p>
-              <a href="tel:586-612-7380" className="contact-link">
-                586-612-7380
-              </a>
-            </div>
+            
             
             <div className="contact-card">
               <div className="contact-icon">💬</div>
@@ -165,15 +158,7 @@ const Contact = () => {
           </div>
         </div>
         
-        <div className="emergency-contact">
-          <div className="emergency-banner">
-            <h3>🚨 Need Immediate Service?</h3>
-            <p>For urgent pressure washing needs, call us directly:</p>
-            <a href="tel:586-612-7380" className="emergency-phone">
-              586-612-7380
-            </a>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

@@ -1,0 +1,45 @@
+.reviews-section {
+  background: #f8fafc;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.review-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.stars {
+  color: #f6b400;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.review-text {
+  color: #2d3748;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.review-author {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+/* Jobber promo removed */
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

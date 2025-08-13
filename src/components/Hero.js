@@ -16,11 +16,11 @@ const Hero = () => {
             we bring coastal properties back to life with results that last.
           </p>
           <div className="hero-cta">
-            <a href="tel:586-612-7380" className="btn btn-primary hero-btn">
-              📞 Call 586-612-7380
-            </a>
-            <a href="#contact" className="btn btn-secondary hero-btn">
+            <a href="#contact" className="btn btn-primary hero-btn">
               Get Free Estimate
+            </a>
+            <a href="tel:586-612-7380" className="btn btn-secondary hero-btn">
+              📞 Call 586-612-7380
             </a>
           </div>
           

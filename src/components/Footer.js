@@ -10,7 +10,6 @@ const Footer = () => {
             <h3>Oceanfront Pressure Pros</h3>
             <p>Professional pressure washing services along the beautiful North Carolina coast.</p>
             <div className="footer-contact">
-              <p>📞 <a href="tel:586-612-7380">586-612-7380</a></p>
               <p>📍 Serving the NC Coast</p>
             </div>
           </div>

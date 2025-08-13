@@ -1,17 +1,40 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 200);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    const doScroll = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(doScroll, 250);
+    } else {
+      doScroll();
     }
     setIsMenuOpen(false);
   };
@@ -21,15 +44,17 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>Oceanfront Pressure Pros</h2>
+            <a href="/" className="brand" onClick={handleLogoClick}>
+              <img src="/images/logo.png" alt="Oceanfront Pressure Pros logo" className="logo-img" />
+              <span className="brand-text">Oceanfront Pressure Pros</span>
+            </a>
           </div>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
               <li><button onClick={() => scrollToSection('about')}>About</button></li>
-              <li><button onClick={() => scrollToSection('services')}>Services</button></li>
               <li><button onClick={() => scrollToSection('before-after')}>Before & After</button></li>
-              <li><button onClick={() => scrollToSection('why-choose-us')}>Why Choose Us</button></li>
+              <li><Link to="/reviews">Reviews</Link></li>
               <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
             </ul>
           </nav>

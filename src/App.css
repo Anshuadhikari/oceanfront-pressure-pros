@@ -10,6 +10,8 @@
 
 .section {
   padding: 80px 0;
+  /* Ensure smooth anchor jumps with fixed header */
+  scroll-margin-top: 100px;
 }
 
 .section-title {

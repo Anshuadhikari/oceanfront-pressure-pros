@@ -4,8 +4,8 @@
 
 .about-section .container {
   max-width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 22px; /* ~10% tighter than 24px */
+  padding-right: 22px;
 }
 
 .about-content {
@@ -14,10 +14,23 @@
 }
 
 .about-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.9;
   color: #4a5568;
   margin-bottom: 2rem;
+}
+
+/* Add gentle whitespace on left/right of the about text block */
+.about-text {
+  padding-left: calc(5% + 32px);
+  padding-right: calc(5% + 32px);
+}
+
+@media (min-width: 1200px) {
+  .about-text {
+    padding-left: calc(5% + 48px);
+    padding-right: calc(5% + 48px);
+  }
 }
 
 .about-cta {
@@ -82,7 +95,7 @@
   }
   
   .about-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .image-placeholder {
