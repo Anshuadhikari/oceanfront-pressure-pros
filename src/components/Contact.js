@@ -50,23 +50,6 @@ const Contact = () => {
         </p>
         
         <div className="contact-content">
-          <div className="contact-info">
-            
-            
-            <div className="contact-card">
-              <div className="contact-icon">💬</div>
-              <h3>Quick Response</h3>
-              <p>We'll get back to you within 24 hours</p>
-              <span className="contact-highlight">Professional & Reliable</span>
-            </div>
-            
-            <div className="contact-card">
-              <div className="contact-icon">🏠</div>
-              <h3>Serving NC Coast</h3>
-              <p>From Wilmington to the Outer Banks</p>
-              <span className="contact-highlight">Local Expertise</span>
-            </div>
-          </div>
           
           <div className="contact-form-container">
             <form onSubmit={handleSubmit} className="contact-form">

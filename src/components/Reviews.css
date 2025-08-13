@@ -34,6 +34,91 @@
   font-weight: 600;
 }
 
+.review-form {
+  margin-bottom: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem;
+}
+
+.review-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.review-form .inline-label {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+.review-form .inline-label label {
+  margin: 0;
+  color: #1a365d;
+  font-weight: 600;
+}
+
+.review-form .form-actions {
+  margin-top: 20px; /* push button a bit lower */
+  text-align: center;
+}
+
+.review-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 10px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+  outline: none;
+  border-color: #1a365d;
+  box-shadow: 0 0 0 3px rgba(26,54,93,0.1);
+}
+
+@media (max-width: 768px) {
+  .review-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Star input */
+.star-input {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.star-input .star {
+  font-size: 1.7rem;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e5e7eb; /* light gray */
+  cursor: pointer;
+  transition: transform 0.1s ease, color 0.2s ease;
+}
+.star-input .star.on {
+  color: #ffc107; /* brighter yellow */
+}
+.star-input .star:hover {
+  transform: scale(1.05);
+}
+
 /* Jobber promo removed */
 
 @media (max-width: 768px) {

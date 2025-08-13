@@ -39,6 +39,11 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const toggleReviewsSidebar = () => {
+    const ev = new CustomEvent('toggle-reviews-sidebar');
+    window.dispatchEvent(ev);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -54,7 +59,7 @@ const Header = () => {
             <ul className="nav-list">
               <li><button onClick={() => scrollToSection('about')}>About</button></li>
               <li><button onClick={() => scrollToSection('before-after')}>Before & After</button></li>
-              <li><Link to="/reviews">Reviews</Link></li>
+              <li><button onClick={toggleReviewsSidebar}>Reviews</button></li>
               <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
             </ul>
           </nav>

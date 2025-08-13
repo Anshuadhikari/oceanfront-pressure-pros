@@ -14,6 +14,27 @@
   scroll-margin-top: 100px;
 }
 
+/* Page grid that holds the left reviews sidebar and the main content */
+.page-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  padding: 0 12px; /* minimal side padding */
+}
+
+.page-grid.sidebar-collapsed {
+  grid-template-columns: 1fr;
+}
+
+.page-grid.sidebar-collapsed #sidebar-col {
+  display: none;
+}
+
+.page-main.expanded {
+  width: 100%;
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;

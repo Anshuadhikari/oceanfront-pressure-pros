@@ -1,0 +1,35 @@
+.reviews-sidebar {
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+.sidebar-inner {
+  height: 100%;
+  overflow: auto;
+  padding-right: 8px;
+}
+.sidebar-title {
+  color: #1a365d;
+  margin-bottom: 8px;
+}
+.reviews-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.feed-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.feed-stars { color: #ffc107; font-size: 0.95rem; letter-spacing: 1px; }
+.feed-text { color: #2d3748; line-height: 1.5; font-size: 0.95rem; }
+.feed-meta { color: #6b7280; font-size: 0.8rem; margin-top: 4px; }
+
+@media (max-width: 1024px) {
+  .reviews-sidebar { display: none; }
+}
+
