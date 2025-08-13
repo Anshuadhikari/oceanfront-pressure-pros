@@ -132,15 +132,7 @@ const BeforeAfter = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="before-after-cta">
-          <h3>Ready to Transform Your Property?</h3>
-          <p>Get the same professional results for your home or business</p>
-          <div className="cta-buttons">
-            <a href="#contact" className="btn btn-primary">Get Free Estimate</a>
-            <a href="tel:586-612-7380" className="btn btn-secondary">Call Now</a>
-          </div>
-        </div>
+        {/* CTA removed as requested */}
 
         {/* Image Modal */}
         {selectedImage && (

@@ -164,36 +164,7 @@
   width: 100%;
 }
 
-.before-after-cta {
-  text-align: center;
-  background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.before-after-cta h3 {
-  color: #1a365d;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.before-after-cta p {
-  color: #4a5568;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-buttons .btn {
-  min-width: 150px;
-}
+/* CTA removed */
 
 /* Image Modal */
 .image-modal {
