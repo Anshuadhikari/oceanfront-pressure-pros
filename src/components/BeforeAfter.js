@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './BeforeAfter.css';
 
 const BeforeAfter = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
   // Real before/after transformations using your actual side-by-side images
   const transformations = [
     {
@@ -74,14 +72,6 @@ const BeforeAfter = () => {
 
   const items = transformations;
 
-  const openImageModal = (transformation) => {
-    setSelectedImage(transformation);
-  };
-
-  const closeImageModal = () => {
-    setSelectedImage(null);
-  };
-
   return (
     <section id="before-after" className="section before-after-section">
       <div className="container">
@@ -121,12 +111,6 @@ const BeforeAfter = () => {
                 <h3>{transformation.title}</h3>
                 <p className="location">📍 {transformation.location}</p>
                 <p className="description">{transformation.description}</p>
-                <button 
-                  className="btn btn-secondary view-details-btn"
-                  onClick={() => openImageModal(transformation)}
-                >
-                  View Full Size
-                </button>
               </div>
             </div>
           ))}
@@ -134,26 +118,6 @@ const BeforeAfter = () => {
 
         {/* CTA removed as requested */}
 
-        {/* Image Modal */}
-        {selectedImage && (
-          <div className="image-modal" onClick={closeImageModal}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
-              <button className="close-modal" onClick={closeImageModal}>×</button>
-              <h3>{selectedImage.title}</h3>
-              <div className="modal-images">
-                <div className="modal-image-container" style={{width: '100%'}}>
-                  <img
-                    src={selectedImage.image}
-                    alt={`Before and After: ${selectedImage.title}`}
-                    style={{width: '100%', height: 'auto', borderRadius: '8px'}}
-                  />
-                </div>
-              </div>
-              <p className="modal-description">{selectedImage.description}</p>
-              <p className="modal-location">📍 {selectedImage.location}</p>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

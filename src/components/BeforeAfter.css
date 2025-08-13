@@ -70,6 +70,7 @@
   aspect-ratio: 16/9;
   border-radius: 12px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
 }
 
 /* Center divider to emphasize Before/After halves */
@@ -160,66 +161,11 @@
   margin-bottom: 1.5rem;
 }
 
-.view-details-btn {
-  width: 100%;
-}
+/* removed view full size button */
 
 /* CTA removed */
 
-/* Image Modal */
-.image-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 20px;
-}
-
-.modal-content {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 800px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #4a5568;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.close-modal:hover {
-  color: #1a365d;
-}
-
-.modal-content h3 {
-  color: #1a365d;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.modal-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
+/* removed modal styles */
 
 .modal-image-container {
   text-align: center;
@@ -287,20 +233,8 @@
     height: 150px;
   }
   
-  .before-after-cta {
-    padding: 2rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons .btn {
-    width: 100%;
-    max-width: 250px;
-  }
-  
+.before-after-cta { padding: 2rem; }
+
   .modal-images {
     grid-template-columns: 1fr;
     gap: 1rem;
