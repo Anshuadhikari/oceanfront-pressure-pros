@@ -120,3 +120,8 @@
   #sidebar-col { display: none; }
   .page-grid { grid-template-columns: 1fr; }
 }
+
+/* Utility: show only on mobile/tablet */
+@media (min-width: 1025px) {
+  .mobile-only { display: none !important; }
+}

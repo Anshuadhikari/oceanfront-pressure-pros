@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import BeforeAfter from './components/BeforeAfter';
 import LeaveReviewForm from './components/LeaveReviewForm';
+import ReviewsInline from './components/ReviewsInline';
 import ReviewsSidebar from './components/ReviewsSidebar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -25,6 +26,7 @@ function App() {
               <div id="page-main" className="page-main">
                 <Hero />
                 <About />
+                <ReviewsInline />
                 <BeforeAfter />
                 <Contact />
                 {/* Leave review form integrated at the end of homepage */}
