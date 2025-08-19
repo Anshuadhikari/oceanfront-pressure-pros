@@ -10,7 +10,7 @@ const Footer = () => {
             <h3>Oceanfront Pressure Pros</h3>
             <p>Professional pressure washing services along the beautiful North Carolina coast.</p>
             <div className="footer-contact">
-              <p>📍 Serving the NC Coast</p>
+              <p>📍 Serving Jacksonville, New Bern, Wilmington and surrounding areas</p>
             </div>
           </div>
           
