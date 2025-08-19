@@ -5,11 +5,25 @@ import { REVIEWS } from '../data/reviews';
 const ReviewsInline = () => {
   const [reviews, setReviews] = useState([]);
 
+  const filterOutBlocked = (list) => {
+    const blockedNamesLower = ['anshu'];
+    return (Array.isArray(list) ? list : []).filter((r) => {
+      const nameLower = String(r?.name || '').toLowerCase();
+      return !blockedNamesLower.includes(nameLower);
+    });
+  };
+
   useEffect(() => {
     const load = () => {
       try {
-        const saved = JSON.parse(localStorage.getItem('ofpp_reviews_v1') || '[]');
-        setReviews(saved.length ? saved : REVIEWS);
+        const savedRaw = JSON.parse(localStorage.getItem('ofpp_reviews_v1') || '[]');
+        const cleaned = filterOutBlocked(savedRaw);
+        if (cleaned.length !== savedRaw.length) {
+          try {
+            localStorage.setItem('ofpp_reviews_v1', JSON.stringify(cleaned));
+          } catch {}
+        }
+        setReviews(cleaned.length ? cleaned : REVIEWS);
       } catch {
         setReviews(REVIEWS);
       }
