@@ -6,7 +6,6 @@ import BeforeAfter from './components/BeforeAfter';
 import LeaveReviewForm from './components/LeaveReviewForm';
 import ReviewsInline from './components/ReviewsInline';
 import ReviewsSidebar from './components/ReviewsSidebar';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -28,7 +27,6 @@ function App() {
                 <About />
                 <ReviewsInline />
                 <BeforeAfter />
-                <Contact />
                 {/* Leave review form integrated at the end of homepage */}
                 <LeaveReviewForm />
               </div>

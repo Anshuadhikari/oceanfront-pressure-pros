@@ -117,7 +117,6 @@ const BeforeAfter = () => {
         </div>
 
         {/* CTA removed as requested */}
-
       </div>
     </section>
   );

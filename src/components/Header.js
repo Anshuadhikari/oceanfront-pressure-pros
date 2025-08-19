@@ -39,25 +39,9 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const handleReviewsClick = () => {
-    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-    if (isMobile) {
-      const doScroll = () => {
-        const el = document.getElementById('reviews');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      };
-      if (location.pathname !== '/') {
-        navigate('/');
-        setTimeout(doScroll, 250);
-      } else {
-        doScroll();
-      }
-      setIsMenuOpen(false);
-      return;
-    }
+  const toggleReviewsSidebar = () => {
     const ev = new CustomEvent('toggle-reviews-sidebar');
     window.dispatchEvent(ev);
-    setIsMenuOpen(false);
   };
 
   return (
@@ -75,8 +59,7 @@ const Header = () => {
             <ul className="nav-list">
               <li><button onClick={() => scrollToSection('about')}>About</button></li>
               <li><button onClick={() => scrollToSection('before-after')}>Before & After</button></li>
-              <li><button onClick={handleReviewsClick}>Reviews</button></li>
-              <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+              <li><button onClick={toggleReviewsSidebar}>Reviews</button></li>
             </ul>
           </nav>
           

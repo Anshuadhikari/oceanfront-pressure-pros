@@ -39,7 +39,6 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Get Started</h4>
             <p>Ready to transform your property?</p>
-            <a href="#contact" className="btn btn-primary">Get Free Estimate</a>
           </div>
         </div>
         
