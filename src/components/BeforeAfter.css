@@ -2,43 +2,6 @@
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
-.category-filter {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.category-btn {    
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 12px 20px;
-  border: 2px solid #e2e8f0;
-  background: white;
-  color: #4a5568;
-  border-radius: 25px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.category-btn:hover {
-  border-color: #1a365d;
-  color: #1a365d;
-}
-
-.category-btn.active {
-  background: #1a365d;
-  color: white;
-  border-color: #1a365d;
-}
-
-.category-icon {
-  font-size: 1.2rem;
-}
-
 .transformations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -161,87 +124,13 @@
   margin-bottom: 1.5rem;
 }
 
-/* removed view full size button */
-
-/* CTA removed */
-
-/* removed modal styles */
-
-.modal-image-container {
-  text-align: center;
-}
-
-.modal-image-label {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.modal-image-label.before {
-  background: #dc2626;
-  color: white;
-}
-
-.modal-image-label.after {
-  background: #16a34a;
-  color: white;
-}
-
-.modal-image-placeholder {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #4a5568;
-}
-
-.modal-description {
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.modal-location {
-  color: #718096;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .category-filter {
-    gap: 0.5rem;
-  }
-  
-  .category-btn {
-    padding: 10px 16px;
-    font-size: 0.9rem;
-  }
-  
   .transformations-grid {
     grid-template-columns: 1fr;
   }
   
   .transformation-images {
     height: 150px;
-  }
-  
-.before-after-cta { padding: 2rem; }
-
-  .modal-images {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .modal-content {
-    padding: 1.5rem;
-    margin: 10px;
   }
 }
